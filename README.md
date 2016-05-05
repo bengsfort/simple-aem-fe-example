@@ -1,6 +1,6 @@
 # Simple AEM Front-End structure example
 ---
-This repo contains an example of a very simple, yet slightly opinionated front end structure for use with AEM, or Adobe Experience Manager. You can find a full write-up on this over at [@aesinv: A simplified front end architecture solution for AEM]().
+This repo contains an example of a very simple, yet slightly opinionated front end structure for use with AEM, or Adobe Experience Manager. You can find a full write-up on this over at [@aesinv: A simplified front end architecture solution for AEM](http://aesinv.com/development/2016/05/04/simplified-aem-frontend-sass.html).
 
 ## Front End
 Since maven compiles the sass and AEM handles a lot of the script concatenation, getting Gulp setup to work with the project is optional but very useful for extended front end development. Gulp is mainly integrated into the project for ease of development with the front end, providing automagic Sass compilation, JavaScript linting and slinging of updated front end resources (HTML, CSS/SCSS, JS) to AEM.
