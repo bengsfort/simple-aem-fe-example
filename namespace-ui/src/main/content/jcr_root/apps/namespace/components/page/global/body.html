@@ -1,0 +1,11 @@
+<body data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+  <div id="wrapper">
+    <header id="header" data-sly-include="header.html"></header>
+    <div id="content" class="container" data-sly-include="content.html"></div>
+  </div>
+  
+  <footer id="footer" data-sly-include="footer.html"></footer>
+
+  <sly data-sly-unwrap data-sly-call="${clientLib.js @ categories='namespace-frontend.vendor'}" />
+  <sly data-sly-unwrap data-sly-call="${clientLib.js @ categories='namespace-frontend.design'}" />
+</body>

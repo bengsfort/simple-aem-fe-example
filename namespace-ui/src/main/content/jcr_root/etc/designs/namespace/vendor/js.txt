@@ -1,0 +1,6 @@
+#base=js
+
+bootstrap.affix.js
+bootstrap.carousel.js
+bootstrap.scrollspy.js
+bootstrap.transition.js

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>com.namespace</groupId>
+		<artifactId>namespace</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>namespace-ui</artifactId>
+	<packaging>jar</packaging>
+	<name>Namespace UI</name>
+
+	<properties>
+		<maven.test.skip>true</maven.test.skip>
+	</properties>
+
+    <profiles>
+        <profile>
+            <id>install</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <package.goal>install</package.goal>
+            </properties>
+        </profile>
+    </profiles>
+
+	<build>
+        <plugins>
+
+			<plugin>
+				<groupId>com.github.warmuuh</groupId>
+				<artifactId>libsass-maven-plugin</artifactId>
+				<version>0.1.6-libsass_3.2.4</version>
+				<executions>
+					<execution>
+						<id>compile-sass</id>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<inputPath>${project.basedir}/src/main/content/jcr_root/etc/designs/namespace/styles</inputPath>
+							<includePath>${project.basedir}/src/main/content/jcr_root/etc/designs/namespace/sass:${project.basedir}/src/main/content/jcr_root/apps/namespace/components</includePath>
+							<outputPath>${project.basedir}/src/main/content/jcr_root/etc/designs/namespace/css</outputPath>
+							<outputStyle>compressed</outputStyle>
+							<generateSourceMap>true</generateSourceMap>
+							<sourceMapOutputPath>${project.basedir}/src/main/content/jcr_root/etc/designs/namespace/css</sourceMapOutputPath>
+							<omitSourceMapingURL>true</omitSourceMapingURL>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+        </plugins>
+	</build>
+	<dependencies></dependencies>
+</project>
