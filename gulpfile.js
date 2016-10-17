@@ -61,10 +61,9 @@ gulp.task('sass:build', function (cb) {
             addComment: false
         }))
         .pipe(plumber.stop())
-        .pipe(gulp.dest(cssPath));
-  
-  // Fire the callback Gulp passes in to tell it we're done
-  cb();
+        .pipe(gulp.dest(cssPath))
+        // Fire the callback Gulp passes in to tell it we're done
+        .on('end', cb);
 });
 
 /**
